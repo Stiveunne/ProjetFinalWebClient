@@ -12,28 +12,78 @@
 
 .slider-container {
     width: 100%;
-    max-width: 1400px; 
+    max-width: 1400px;
     overflow: hidden;
     position: relative;
 }
 
-/*transition*/
 .slider {
     display: flex;
-    transition: transform 0.6s ease-in-out; 
+    transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+    position: relative;
 }
 
 .slider img {
-    width: 1100px; 
+    width: 1100px;
     height: 400px; 
-    object-fit: cover;
-    margin: 0 15px; 
-    border-radius: 15px; /*image arrondie*/
+    object-fit: fill;
+    margin: 0 15px;
+    border-radius: 15px; /* Arrondi des bords */
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 60px; /* Ajuste la position pour remonter le bloc sur l'image */
+    left: 20px;
+    width: calc(100% - 40px); /* Réduit la largeur pour laisser de l'espace sur les côtés */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: flex-end; /* Place le contenu vers le bas */
+    align-items: flex-start; /* Aligne les éléments à gauche */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    pointer-events: none;
+}
+
+.text-content {
+    text-align: left;
+    pointer-events: auto; /* Permet l'interaction avec le texte */
+    margin-bottom: 10px; /* Ajoute un petit espacement sous le texte */
+}
+
+.text-content h1 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.text-content h2,
+.text-content p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.text-overlay button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 11px;
+    pointer-events: auto; /* Permet l'interaction avec le bouton */
+}
+
+.text-overlay button:hover {
+    background-color: #cc0000;
 }
 
 .buttons {
-    position: absolute; 
-    bottom: 120px; 
+    position: absolute;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -41,7 +91,7 @@
 }
 
 .buttons button {
-    background-color: white; 
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 50%;
     width: 15px;
@@ -50,7 +100,10 @@
     transition: background-color 0.3s;
 }
 
-/*changer l'aperçue au survol*/
 .buttons button:hover {
-    background-color: rgb(182, 39, 39) ; 
+    background-color: rgb(182, 39, 39);
+}
+
+.buttons button.active {
+    background-color: rgb(182, 39, 39);
 }
