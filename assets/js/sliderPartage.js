@@ -3,7 +3,7 @@ function showSlide(index) {
     const slideWidth = slider.children[0].clientWidth;
     slider.style.transform = `translateX(-${index * slideWidth}px)`;
 
-    // Gestion de l'état des boutons
+    //lié à l'affichage pour avoir une couleur sur le bouton sélectionné
     const buttons = document.querySelectorAll('.buttons button');
     buttons.forEach(button => button.classList.remove('active'));
     buttons[index].classList.add('active');

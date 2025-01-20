@@ -1,3 +1,5 @@
+
+/*css du bloc slider1*/
 #sliderPartage {
     margin: 0;
     padding: 0;
@@ -25,24 +27,26 @@
 .slide {
     position: relative;
 }
-
+/*choix des tailles et placement des images*/
 .slider img {
     width: 1100px;
     height: 400px; 
     object-fit: fill;
     margin: 0 15px;
-    border-radius: 15px; /* Arrondi des bords */
+    border-radius: 15px; /* Arrondir les bordures */
 }
 
+/*placement du texte*/
 .text-overlay {
     position: absolute;
-    bottom: 60px; /* Ajuste la position pour remonter le bloc sur l'image */
+    bottom: 60px;
     left: 20px;
-    width: calc(100% - 40px); /* Réduit la largeur pour laisser de l'espace sur les côtés */
+    width: calc(100% - 40px); 
     display: flex;
-    flex-direction: column; /* Aligne les éléments verticalement */
-    justify-content: flex-end; /* Place le contenu vers le bas */
-    align-items: flex-start; /* Aligne les éléments à gauche */
+    flex-direction: column;
+    /*aligne le bloc texte en bas a gauche*/
+    justify-content: flex-end; 
+    align-items: flex-start; 
     color: white;
     font-family: 'Arial', sans-serif;
     pointer-events: none;
@@ -50,8 +54,7 @@
 
 .text-content {
     text-align: left;
-    pointer-events: auto; /* Permet l'interaction avec le texte */
-    margin-bottom: 10px; /* Ajoute un petit espacement sous le texte */
+    margin-bottom: 10px; 
 }
 
 .text-content h1 {
@@ -66,6 +69,7 @@
     margin: 0;
 }
 
+/*apparence bouton "en savoir plus"*/
 .text-overlay button {
     background-color: #ff0000;
     color: white;
@@ -74,13 +78,14 @@
     cursor: pointer;
     border-radius: 5px;
     font-size: 11px;
-    pointer-events: auto; /* Permet l'interaction avec le bouton */
+    pointer-events: auto; 
 }
 
 .text-overlay button:hover {
     background-color: #cc0000;
 }
 
+/*boutons liés au js pour le défilement*/
 .buttons {
     position: absolute;
     bottom: 20px;
@@ -90,6 +95,7 @@
     gap: 10px;
 }
 
+/*apparence des boutons*/
 .buttons button {
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
@@ -100,6 +106,7 @@
     transition: background-color 0.3s;
 }
 
+/*effet sur les boutons*/
 .buttons button:hover {
     background-color: rgb(182, 39, 39);
 }
