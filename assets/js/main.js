@@ -15,3 +15,11 @@ function showClient(clientNumber) {
   // Active le bouton souhaité
   buttons[clientNumber - 1].classList.add('active'); 
 }
+
+function AfficheSearchBar(){
+  var textInput = document.createElement("INPUT");
+  textInput.id = "rechercheLoupe";
+  textInput.name = "rechercheLoupe";
+  textInput.type = "text";
+  document.getElementById("SearchBar").innerHTML = `<input type="text" name="rechercheLoupe" id="rechercheLoupe" placeholder="Rechercher">`;
+}
