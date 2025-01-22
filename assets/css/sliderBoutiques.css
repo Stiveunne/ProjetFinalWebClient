@@ -1,10 +1,12 @@
+/*Placer le container du slider*/
 .sliderContainer-boutiques {
     margin: 0;
     background-color: rgb(182, 39, 39);
     margin: auto;
-    padding-bottom: 30px; /* Ajoute de l'espace en dessous du slider */
+    padding-bottom: 30px; 
 }
 
+/*Propriétés du slider*/
 .slider {
     width: 100%;
     padding-top: 10px;
@@ -19,6 +21,7 @@
     position: relative;
 }
 
+/*Propriétés de la liste*/
 .slider .list {
     display: flex;
     width: 100%;
@@ -26,6 +29,7 @@
     position: relative;
 }
 
+/*Propriétés des items de la liste*/
 .slider .list .item {
     width: var(--width);
     height: var(--height);
@@ -33,18 +37,20 @@
     left: 100%;
     animation: autoRun 10s linear infinite;
     transition: filter 0.5s;
-    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
-    transition: transform 0.3s ease, filter 0.5s; /* Ajout d'une transition pour un effet fluide */
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important; /*permet de rendre cette ligne dominante*/
+    transition: transform 0.3s ease, filter 0.5s; 
 }
 
+/*Propriétés des images dans les cadres*/
 .slider .list .item img {
     width: 100%;
-    height: 100%; /* Fait en sorte que l'image remplisse la hauteur */
-    object-fit: cover; /* Remplit le cadre tout en conservant les proportions */
-    object-position: center; /* Centre l'image dans le cadre */
-    display: block; /* Supprime les espaces blancs en bas de l'image */
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+    display: block; 
 }
 
+/*animation auto*/
 @keyframes autoRun {
     from {
         left: 100%;
@@ -55,20 +61,23 @@
     }
 }
 
+/*Pause au survol*/
 .slider:hover .item {
     animation-play-state: paused !important;
 }
 
+/*Animation au survol d'un cadre*/
 .slider .item:hover {
-    filter: grayscale(0);
-    transform: translateY(-10px); /* Fait remonter l'élément de 10px */
+    transform: translateY(-10px); 
     z-index: 10;
 }
 
+/*Autorun mais de gauche à droite*/
 .slider[reverse="true"] .item {
     animation: reversePlay 10s linear infinite;
 }
 
+/*Animation concrete*/
 @keyframes reversePlay {
     from {
         left: calc(var(--width) * -1);
@@ -81,8 +90,8 @@
 
 /* Styles des boutons de navigation (flèches) */
 .prev-button {
-    background-color: transparent; /* Retirer le fond rond */
-    color: black; /* Couleur des flèches */
+    background-color: transparent; 
+    color: black; 
     border: none;
     padding: 0;
     font-size: 30px;
@@ -96,12 +105,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    left: 50px;  /* Placer la flèche gauche sur le côté gauche du slider */
+    left: 50px; 
 }
 
 .next-button {
-    background-color: transparent; /* Retirer le fond rond */
-    color: black; /* Couleur des flèches */
+    background-color: transparent;
+    color: black; 
     border: none;
     padding: 0;
     font-size: 30px;
@@ -115,10 +124,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    right: 50px; /* Placer la flèche droite sur le côté droit*/
+    right: 50px; 
 }
 
-/* Flèches */
+/* Flèche gauche */
 .prev-button:before {
     content: "";
     position: absolute;
@@ -131,6 +140,7 @@
     left: -2px; /* Ajuste légèrement la position */
 }
 
+/* Flèche droite */
 .next-button:before {
     content: "";
     position: absolute;
@@ -143,8 +153,4 @@
     right: -2px; /* Ajuste légèrement la position */
 }
 
-/* Flèche droite */
-.next-button:before {
-    transform: rotate(45deg); /* Pour tourner l'icône de la flèche vers la droite */
-    right: -2px; /* Ajuste légèrement la position */
-}
+
