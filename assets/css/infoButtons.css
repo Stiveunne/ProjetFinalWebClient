@@ -70,7 +70,7 @@
 /*Effet au survol des cadres*/
 .imageInfoContainer:hover {
     transform: translateY(-5px);
-    background-color: rgba(182, 39, 39, 0.8);
+    background-color: rgba(255, 0, 0, 0.8);
 }
 
 /*Placer le texte dans les cadres*/
