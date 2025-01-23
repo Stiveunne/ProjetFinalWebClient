@@ -3,34 +3,36 @@ const slider = document.querySelector('#actus_slides');
 const arrowButtons = document.querySelectorAll('#actus_interactible_arrows button');
 const imgs = document.querySelectorAll('.actus_image[img-url]');
 const progressIndicator = document.querySelector('.progress-indicator');
-const progressBar = document.getElementById('slider-progress-bar'); // Barre de progression
+const progressBar = document.getElementById('slider-progress-bar'); 
 let actusIndex = 0;
 
 imgs.forEach(img => {
     img.style.backgroundImage = `url(\'${img.getAttribute('img-url')}\')`;
 });
 
+// Ne pas avoir d'erreur d'index
 function slide(nextIndex) {
-    // S'assurer que l'index reste dans les limites [0, 9]
     if (nextIndex < 0) nextIndex = 0;
     if (nextIndex >= 10) nextIndex = 9;
 
-    // Mettre à jour la position du slider
+    // Mettre la position à jour
     slider.style.transform = `translateX(-${(nextIndex / 10) * 100}%)`;
     actusIndex = nextIndex;
 
-    // Mettre à jour l'affichage de l'index
+    // Mettre l'affichage à jour
     indexActus.innerHTML = `<span>${actusIndex + 1}/</span>10`;
 
     // Calcul proportionnel de la position
-    const progressWidth = progressBar.offsetWidth; // Largeur totale de la barre
-    const indicatorWidth = progressIndicator.offsetWidth; // Largeur de l'indicateur
-    const maxOffset = progressWidth - indicatorWidth; // Position maximale pour éviter de dépasser
-
-    const progressPosition = (actusIndex / 9) * maxOffset; // Position proportionnelle en tenant compte de la taille de l'indicateur
-    progressIndicator.style.left = `${progressPosition}px`; // Déplacer l'indicateur
+    const progressWidth = progressBar.offsetWidth; 
+    const indicatorWidth = progressIndicator.offsetWidth; 
+    // Position max parce que mon indicateur sortait de la barre
+    const maxOffset = progressWidth - indicatorWidth; 
+    // Prendre en compte la taille de l'indicateur (c'est en partie pour ça que mon indicateur sortait de la barre)
+    const progressPosition = (actusIndex / 9) * maxOffset; 
+    progressIndicator.style.left = `${progressPosition}px`; 
 }
 
+// Changer de slide en cliquant sur une des flèches
 arrowButtons.forEach((button) => {
     button.addEventListener('click', () => {
         const indexChange = +button.getAttribute('index-change');
