@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/sliderActusStyle.css">
     <link rel="stylesheet" href="assets/css/sliderPartage.css">
+    <link rel="stylesheet" href="assets/css/sliderBoutiques.css">
+    <link rel="stylesheet" href="assets/css/categoryButtons.css">
+    //juste pour une police dans le categoryButtons
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/infoButtons.css">
+    <link rel="stylesheet" href="assets/css/newsletter.css">
+    <link rel="stylesheet" href="assets/css/temp.css">
     <meta name="description" content="">
     
 </head>
@@ -53,12 +60,26 @@
                 <a href="">Actus & Bon plans</a>
                 <a href="">Infos pratiques</a>
             </nav>
-            <div class="flex-space"></div>
+            <div class="flex-space" id="flex-space">
+                <form action="" class="SearchBar" id="SearchBar">
+                    
+                </form>
+            </div>
             <div class="opening-hours">
-                <span>OUVERT - <B>9H30 à 19H30</B></span>
+                <span class="Heures">OUVERT - <B>9H30 à 19H30</B></span>
+                <br>
+                <span class="tips">LUNDI - <B>9H30 à 19H30</B><br>
+                    MARDI - <B>9H30 à 19H30</B><br>
+                    MERCREDI - <B>9H30 à 19H30</B><br>
+                    JEUDI - <B>9H30 à 19H30</B><br>
+                    VENDREDI - <B>9H30 à 19H30</B><br>
+                    SAMEDI - <B>8H à 21H</B><br>
+                    DIMANCHE - <B>8H à 12H</B><br>
+                </span>
             </div>
             <div class="search-icon">
-                <img src="./assets/img/louperb.png" alt="Recherche" class="loupe-img">
+                <img src="./assets/img/louperb.png" alt="Recherche" class="loupe-img" onclick="AfficheSearchBar()">
+                
             </div>
         </div>
         <div class="info-banner">
@@ -67,9 +88,27 @@
     </div>
 </header>
 <!-- ------------------------------------------------------>
-<!-- ------------------ END HEADER ------------------------>
+<!-- ----------------- END HEADER ------------------------>
 <!-- ------------------------------------------------------>
 
+
+<!-- ------------------------------------------------------>
+<!-- -------------- Fixed Social Networks ----------------->
+<!-- ------------------------------------------------------>
+<div class="Partager">
+    <div class="reseau">
+        <a href="https://www.facebook.com/" class="ReseauF"><img src="./assets/img/Composant 25 – 1.svg" alt="Logo Facebook"></a>  
+        <a href="https://www.x.com/" class="ReseauX"><img src="./assets/img/Composant 26 – 1.svg" alt="Logo Twitter"></a>
+    </div>
+    <p class="PartageTag">#enmodepartage</p>
+</div>
+<!-- ------------------------------------------------------>
+<!-- ------------- End Fixed Social Networks -------------->
+<!-- ------------------------------------------------------>
+
+<!-- ------------------------------------------------------>
+<!-- ------------------ SLIDER 1 -------------------------->
+<!-- ------------------------------------------------------>
 
 <div id="home">
 
@@ -128,14 +167,39 @@
     <!-- ------------------------------------------------------>
 
 
-    <div class="container-services">
-
+    <!-- ------------------------------------------------------>
+    <!-- ----------------- Category Buttons --------------------->
+    <!-- ------------------------------------------------------>
+    <div class="categoryButtons">
+        <div class="imageContainer">
+            <img src="./assets/img/foundItem.svg" alt="objets trouvés">
+            <p>Objets Trouvés</p>
+        </div>
+        <div class="imageContainer">
+            <img src="./assets/img/mapPin.svg" alt="accès">
+            <p>Accès</p>
+        </div>
+        <div class="villain">
+            <img src="./assets/img/map.svg" alt="plan">
+            <p>Plan</p>
+        </div>
+        <div class="imageContainer">
+            <img src="./assets/img/access.svg" alt="accessibilité">
+            <p>Accessibilité</p>
+        </div>
+        <div class="imageContainer">
+            <img src="./assets/img/services.svg" alt="services">
+            <p>Services</p>
+        </div>
     </div>
+    <!-- ------------------------------------------------------>
+    <!-- ------------------ END Category Buttons ---------------------->
+    <!-- ------------------------------------------------------>
 
 
 
     <!-- ------------------------------------------------------>
-    <!-- ----------------- Slider experts --------------------->
+    <!-- ----------------- Slider Actus ----------------------->
     <!-- ------------------------------------------------------>
     <div id="actus-slider">
             <div id="actus">
@@ -259,191 +323,183 @@
 
     </div>
     <!-- ------------------------------------------------------>
-    <!-- --------------- END Slider experts ------------------->
+    <!-- --------------- END Slider Actus --------------------->
     <!-- ------------------------------------------------------>
 
 
 
-    <!-- ------------------------------------------------------>
-    <!-- ----------------- Slider missions -------------------->
-    <!-- ------------------------------------------------------>
-    <div></div>
-    <!-- ------------------------------------------------------>
-    <!-- --------------- END Slider missions ------------------>
-    <!-- ------------------------------------------------------>
 
 
-
+    
     <!-- ------------------------------------------------------>
-    <!-- --- Témoignage et formulaire de recherche ------------>
+    <!-- ----------------- InfoButtons ------------------------>
     <!-- ------------------------------------------------------>
-    <div class="TemoignageFormulaire">  
-        <div id="temoignage">
-            <div id="titre-fleche"> 
-                <div id="titre">
-                    <h3 id="titreAvis">ILS NOUS FONT CONFIANCE</h3></div>
-                <div id="container-fleche">    
-                    <h3><img src="assets/img/Icon feather-arrow-right.svg" alt="fleche_droite" class="fleche"></h3></div>  
-            </div>
-                <div id="avis1" class="avis actif" >   
-                    <p id="avis-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-                    <div id="BARRE">
-                        <img src="assets/img/Tracé 62.svg" alt="barre">
-                    </div>
-                    <div id="container-photo">  
-                        <div id="pp">   
-                            <img src="client.jpg" alt="photo client" class="image-A"> <!--class="image-ronde"-->
-                        </div>  
-                        <div id="client">  
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <p id="NomClient">Mathéo</p>
-                            <p id="profession">Responsable communication</p>
-                        </div>  
-                    </div>  
-                </div>  
-
-                <div id="avis2" class="avis">   
-                    <p id="avis-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-                    <div id="BARRE">
-                        <img src="assets/img/Tracé 62.svg" alt="barre">
-                    </div>
-                    <div id="container-photo">  
-                        <div id="pp">  
-                            <img src="steven.webp" alt="photo client" class="image-A"> <!--class="image-ronde"-->
-                        </div>  
-                        <div id="client">  
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <p id="NomClient">Steven</p>
-                            <p id="profession">Chef de projet</p>
-                        </div>  
-                    </div> 
-                </div>    
-
-                <div id="avis3" class="avis">    
-                    <p id="avis-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-                    <div id="BARRE">
-                        <img src="assets/img/Tracé 62.svg" alt="barre">
-                    </div>
-                    <div id="container-photo">  
-                        <div id="pp">  
-                            <img src="fabz.webp" alt="photo client" class="image-A"> <!--class="image-ronde"-->
-                        </div>  
-                        <div id="client">   
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <img src="assets/img/Icon ionic-md-star.svg" alt="étoile_de_note">
-                            <p id="NomClient">Martin</p>
-                            <p id="profession">Développeur</p>
-                        </div>
-                    </div>    
-                </div>
-                <!-- container pour mettre des gaps entre mes boutons-->
-                <div class="button-container"> 
-                    <!-- showClient vient du js et permet d'afficher le texte en cliquant sur un bouton-->
-                    <button type="button" class="line active" onclick="showClient(1)"></button>
-                    <button type="button" class="line" onclick="showClient(2)"></button>
-                    <button type="button" class="line" onclick="showClient(3)"></button>
-                </div>
+    <div class="container">
+        <div class="topText">
+            <h1>Une envie de shopping<br><span class="particuliere">particulière ?</span></h1>
         </div>
         
+        <div class="infoButtons">
+            <div class="imageInfoContainer">
+                <img src="./assets/img/home.svg" alt="Maison">
+                <p class="textInfoContainer">Maison</p>
+            </div>
+            <div class="imageInfoContainer">
+                <img src="./assets/img/resto.svg" alt="Restauration">
+                <p class="textInfoContainer">Restauration</p>
+            </div>
+            <div class="imageInfoContainer">
+                <img src="./assets/img/mode.svg" alt="Mode & Bijoux">
+                <p class="textInfoContainer">Mode & Bijoux</p>
+            </div>
+            <div class="imageInfoContainer">
+                <img src="./assets/img/beauty.svg" alt="Beauté & Santé">
+                <p class="textInfoContainer">Beauté & Santé</p>
+            </div>
+            <div class="imageInfoContainer">
+                <img src="./assets/img/culture.svg" alt="Culture & Loisirs">
+                <p class="textInfoContainer">Culture & Loisirs</p>
+            </div>
+        </div>
         
-        <div id="FormulaireRecherche">
-            <form id="formulaire" action="">
-                <h3 id="TitreFormulaire">TROUVER VOTRE EXPERT</h3>
-                <select class="critere" name="activite" id="activite">
-                    <option value="" disabled selected hidden>Activité</option>
-                    <option value="placeholder">placeholder</option>
-                    <option value="placeholder">placeholder</option>
-                    <option value="placeholder">placeholder</option>
-                    <option value="placeholder">placeholder</option>
-                </select>
-                
-                <select class="critere" name="expertiseMetier" id="expertiseMetier">
-                    <option value="" disabled selected hidden>Expertise métier</option>
-                    <option value="placeholder">placeholder</option>
-                    <option value="placeholder">placeholder</option>
-                    <option value="placeholder">placeholder</option>
-                    <option value="placeholder">placeholder</option>
-                </select>
-                
-                <select class="critere" name="expertiseSectorielle" id="expertiseSectorielle">
-                    <option value="" disabled selected hidden>Expertise sectorielle</option>
-                    <option value="placeholder">placeholder</option>
-                    <option value="placeholder">placeholder</option>
-                    <option value="placeholder">placeholder</option>
-                    <option value="placeholder">placeholder</option>
-                </select>
-
-                <select class="critere" name="Localisation" id="Localisation">
-                    <option value="" disabled selected hidden>Activité</option>
-                    <option value="placeholder">placeholder</option>
-                    <option value="placeholder">placeholder</option>
-                    <option value="placeholder">placeholder</option>
-                    <option value="placeholder">placeholder</option>
-                </select>
-
-                <input type="submit" name="rechercher" id="rechercher" value="LANCER LA RECHERCHE ➔">
-            </form>
-            
+        <div class="bottomText">
+            <p><B>Plus de 40 boutiques</B> de mode, beauté et déco pour dénicher les dernières tendances<br>et se faire plaisir ensemble.</p>
+        </div>
+    
+        <div class="buttonContainer">
+          <button class="boutiqueButton">Toutes les boutiques</button>
         </div>
     </div>
+    
+    
     <!-- ------------------------------------------------------>
-    <!-- --- END Témoignage et formulaire de recherche -------->
-    <!-- ------------------------------------------------------>
-
-
-
-    <!-- ------------------------------------------------------>
-    <!-- ---------------- Slider compétences ------------------>
-    <!-- ------------------------------------------------------>
-    <div></div>
-    <!-- ------------------------------------------------------>
-    <!-- -------------- END Slider compétences ---------------->
+    <!-- --------------- END InfoButtons ---------------------->
     <!-- ------------------------------------------------------>
 
+    <!-- ------------------------------------------------------>
+    <!-- --------------- Bloc Newsletter ---------------------->
+    <!-- ------------------------------------------------------>
+    <div>
+        <p class="newsletterTag">#enmodetips</p>
+            <section class="Yellow_container">
+                <div class="newsletter_content">
+                    <h2 class="NLTitle">Infos & Bons plans</h2>
+                    <div class="newsletterForm">
+                        <form action="">
+                            <input type="text" id="MailForm" name="email" placeholder="Votre email">
 
+                            <input type="submit" class="fleche" name="rechercher" id="rechercher" value="➔">
+                        </form>
+                    </div>
 
-    <!-- ---------------------------------------------------------->
-    <!---- Encart "mission à nous confier" et Nos publications ---->
-    <!-- ---------------------------------------------------------->
-    <div></div>
-    <!-- ---------------------------------------------------------->
-    <!-- END Encart "mission à nous confier" et Nos publications -->
-    <!-- ---------------------------------------------------------->
+                    <p class="disclaimer">
+                        En renseignant votre adresse e-mail, vous acceptez de recevoir des informations de la part des enseignes et vous prenez connaissance de notre <a href="#">Politique de confidentialité</a>.
+                    </p>
+                </div>
+            </section>
+        <div class="MidRedPart">
 
+        </div>
+    </div>
+        
+    <!-- ------------------------------------------------------>
+    <!-- --------------- END Newsletter ----------------------->
+    <!-- ------------------------------------------------------>
 
-
-
-    <!-- ---------------------------------------------------------->
-    <!------------------------ Actualités ------------------------->
-    <!-- ---------------------------------------------------------->
-
-    <!-- ---------------------------------------------------------->
-    <!---------------------- END Actualités ----------------------->
-    <!-- ---------------------------------------------------------->
-
-
+    
+    <!-- ------------------------------------------------------>
+    <!-- ---------------- Slider Boutiques -------------------->
+    <!-- ------------------------------------------------------>
+    <div class="sliderContainer-boutiques">
+        <div class="slider" style="
+            --width: 140px;
+            --height: 140px;
+            --quantity: 9;">
+            <button class="prev-button"></button>
+            <div class="list">
+                <div class="item" style="--position: 1"><img src="./assets/img/mcdo.png" alt=""></div>
+                <div class="item" style="--position: 2"><img src="./assets/img/marionnaud.png" alt=""></div>
+                <div class="item" style="--position: 3"><img src="./assets/img/jd.png" alt=""></div>
+                <div class="item" style="--position: 4"><img src="./assets/img/fnac.png" alt=""></div>
+                <div class="item" style="--position: 5"><img src="./assets/img/bdcuisine.png" alt=""></div>
+                <div class="item" style="--position: 6"><img src="./assets/img/pharmacie.png" alt=""></div>
+                <div class="item" style="--position: 7"><img src="./assets/img/h&m.png" alt=""></div>
+                <div class="item" style="--position: 8"><img src="./assets/img/normal.png" alt=""></div>
+                <div class="item" style="--position: 9"><img src="./assets/img/sephora.png" alt=""></div>
+            </div>
+            <button class="next-button"></button>
+          </div>
+    </div>
+    <!-- ------------------------------------------------------>
+    <!-- -------------- END Slider Boutiques ------------------>
+    <!-- ------------------------------------------------------>
 
 <!-- ---------------------------------------------------------->
-<!------------------------ FOOTER ------------------------->
+<!------------------------ FOOTER ----------------------------->
 <!-- ---------------------------------------------------------->
 
 </div> <!-- fermeture de la div id="home" -->
+
+
 <footer>
-    <div class="container">
-        <div class="logo-container">
-            <img class="header_img" src="./assets/img/logo1rb.png" alt="Logo">
+    <div class="footer_container">
+        <div class="colonne1">
+            <div class="logo-container">
+                <img class="header_img" src="./assets/img/logo1rb.png" alt="Logo">
+            </div>
+            <h3>Shopify</h3>
+            <p>Toute l'adresse est là <br> ou pas...</p>
+            <div class="BorderTel">
+                <div class="infoTel">
+                    <img class="icon_tel" src="./assets/img/Icon feather-smartphone.svg" alt="Icon2Telephone">
+                    <p class="footerInfo">01 02 03 04 05</p>
+                </div>
+            </div>
+            <div class="BorderMail">
+                <div class="infoMail">
+                    <img class="icon_mail" src="./assets/img/Icon feather-mail.svg" alt="Icon2Mail">
+                    <a href="mailto:" class="footerInfo" id="footerMailLink">Par mail</a>
+                </div>
+            </div>
         </div>
+        <div class="colonne2">
+            <div class="Logo&Vous">
+                <h3>Shopify et vous</h3>
+                <a href="" class="footerLink">Notre histoire</a><br>
+                <a href="" class="footerLink">Accès / Horaires</a><br>
+                <a href="" class="footerLink">Boutiques & Restaurants</a><br>
+                <a href="" class="footerLink">Actus & Bons Plans</a><br>
+                <a href="" class="footerLink">Infos pratiques</a><br>
+                <a href="" class="footerLink">Plans des centres</a><br>
+                <a href="" class="footerLink">Emploi</a>
+            </div>
+            <div class="louer">
+                <h3>Louer</h3>
+                <a href="" class="footerLink">Un emplacement temporaire</a><br>
+                <a href="" class="footerLink">Un local</a>
+            </div>
+        </div>
+        <div class="colonne3">
+            <div class="PartagerFooter">
+                <a href="https://www.facebook.com/" class="footerFacebook"><img src="./assets/img/Composant 25 – 1.svg" alt="Logo Facebook"></a>  
+                <a href="https://www.x.com/" class="footerX"><img src="./assets/img/Composant 26 – 1.svg" alt="Logo Twitter"></a>
+                <p class="PartageTagFooter">  #enmode<span class="partageROUGE">partage</span></p>
+            </div>
+            <div class="newsletter">
+                <h3>Infos & Bons plans</h3>
+                <div class="newsletterFormFooter">
+                    <form action="">
+                        <input type="text" id="MailFormFooter" name="email" placeholder="Votre email">
+        
+  		                <input type="submit" class="fleche" name="rechercher" id="rechercher" value="➔">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p class="LogoRight">2025 Logo. Tous droits réservés.</p>
+        <p class="Mentions"><a href="" class="footerLink">Mentions légales</a> - <a href="" class="footerLink">Politique de confidentialité</a></p>
     </div>
 </footer>
 <!-- ---------------------------------------------------------->
@@ -457,4 +513,5 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/sliderActus.js"></script>
 <script src="assets/js/sliderPartage.js"></script>
+<script src="assets/js/sliderBoutiques.js"></script>
 </html>
