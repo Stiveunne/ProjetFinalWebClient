@@ -1,0 +1,113 @@
+/*Container infoButtons et texte annexe*/
+.container {
+    position: relative;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+/*Placer le titre au dessus des cadres*/
+.topText {
+    display: flex;
+    justify-content: flex-start; 
+    margin-top: 100px;
+    height: 100%; 
+    margin-left: 80px; 
+}
+
+/*Propriétés du titre au dessus des cadres*/
+.topText h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1; 
+    font-weight: 800; /*Elargir la police de base*/
+}
+
+/*Effet de transparence sur "particuliere ?*/
+.particuliere {
+    color: transparent; 
+    -webkit-text-stroke: 1px white; /*Ajouter un contour blanc pour que le texte soit visible*/
+}
+
+/*Propriétés du bloc texte en dessous des cadres*/
+.bottomText p {
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/*Placer le container des cadres*/
+.infoButtons {
+    display: flex;
+    justify-content: center;
+    gap: 50px; 
+    padding: 20px;
+    align-items: center;
+}
+
+/*Création des cadres*/
+.imageInfoContainer {
+    width: 150px;
+    height: 150px;
+    border: 4px solid white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/*Placer les images dans les cadres*/
+.imageInfoContainer img {
+    max-width: 80%;
+    max-height: 70%;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/*Effet au survol des cadres*/
+.imageInfoContainer:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+/*Placer le texte dans les cadres*/
+.textInfoContainer {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*Placer le bouton "toutes les boutiques"*/
+.buttonContainer {
+    position: absolute;
+    top: 16%; 
+    right: 10%; 
+    transform: translateY(-50%);
+}
+
+/*Propriétés du bouton*/
+.boutiqueButton {
+    background-color: white;
+    color: rgb(182, 39, 39);
+    border: none;
+    padding: 6px 12px;
+    font-size: 10px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*Effet au survol du bouton*/
+.boutiqueButton:hover {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /*ombre du cadre bouton pas forcément utile vu qu'on a une image de fond*/
+}

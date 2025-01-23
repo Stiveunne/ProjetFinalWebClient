@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="assets/css/sliderActusStyle.css">
     <link rel="stylesheet" href="assets/css/sliderPartage.css">
     <link rel="stylesheet" href="assets/css/sliderBoutiques.css">
+    <link rel="stylesheet" href="assets/css/categoryButtons.css">
+    //juste pour une police dans le categoryButtons
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/infoButtons.css">
     <meta name="description" content="">
     
 </head>
@@ -54,12 +58,26 @@
                 <a href="">Actus & Bon plans</a>
                 <a href="">Infos pratiques</a>
             </nav>
-            <div class="flex-space"></div>
+            <div class="flex-space" id="flex-space">
+                <form action="" class="SearchBar" id="SearchBar">
+                    
+                </form>
+            </div>
             <div class="opening-hours">
-                <span>OUVERT - <B>9H30 à 19H30</B></span>
+                <span class="Heures">OUVERT - <B>9H30 à 19H30</B></span>
+                <br>
+                <span class="tips">LUNDI - <B>9H30 à 19H30</B><br>
+                    MARDI - <B>9H30 à 19H30</B><br>
+                    MERCREDI - <B>9H30 à 19H30</B><br>
+                    JEUDI - <B>9H30 à 19H30</B><br>
+                    VENDREDI - <B>9H30 à 19H30</B><br>
+                    SAMEDI - <B>8H à 21H</B><br>
+                    DIMANCHE - <B>8H à 12H</B><br>
+                </span>
             </div>
             <div class="search-icon">
-                <img src="./assets/img/louperb.png" alt="Recherche" class="loupe-img">
+                <img src="./assets/img/louperb.png" alt="Recherche" class="loupe-img" onclick="AfficheSearchBar()">
+                
             </div>
         </div>
         <div class="info-banner">
@@ -68,7 +86,7 @@
     </div>
 </header>
 <!-- ------------------------------------------------------>
-<!-- ------------------ END HEADER ------------------------>
+<!-- ----------------- END HEADER ------------------------>
 <!-- ------------------------------------------------------>
 
 
@@ -101,14 +119,39 @@
     <!-- ------------------------------------------------------>
 
 
-    <div class="container-services">
-
+    <!-- ------------------------------------------------------>
+    <!-- ----------------- Category Buttons --------------------->
+    <!-- ------------------------------------------------------>
+    <div class="categoryButtons">
+        <div class="imageContainer">
+            <img src="./assets/img/foundItem.svg" alt="objets trouvés">
+            <p>Objets Trouvés</p>
+        </div>
+        <div class="imageContainer">
+            <img src="./assets/img/mapPin.svg" alt="accès">
+            <p>Accès</p>
+        </div>
+        <div class="villain">
+            <img src="./assets/img/map.svg" alt="plan">
+            <p>Plan</p>
+        </div>
+        <div class="imageContainer">
+            <img src="./assets/img/access.svg" alt="accessibilité">
+            <p>Accessibilité</p>
+        </div>
+        <div class="imageContainer">
+            <img src="./assets/img/services.svg" alt="services">
+            <p>Services</p>
+        </div>
     </div>
+    <!-- ------------------------------------------------------>
+    <!-- ------------------ END Category Buttons ---------------------->
+    <!-- ------------------------------------------------------>
 
 
 
     <!-- ------------------------------------------------------>
-    <!-- ----------------- Slider experts --------------------->
+    <!-- ----------------- Slider Actus ----------------------->
     <!-- ------------------------------------------------------>
     <div id="actus-slider">
             <div id="actus">
@@ -232,21 +275,58 @@
 
     </div>
     <!-- ------------------------------------------------------>
-    <!-- --------------- END Slider experts ------------------->
+    <!-- --------------- END Slider Actus --------------------->
     <!-- ------------------------------------------------------>
 
 
 
-    <!-- ------------------------------------------------------>
-    <!-- ----------------- Slider missions -------------------->
-    <!-- ------------------------------------------------------>
-    <div></div>
-    <!-- ------------------------------------------------------>
-    <!-- --------------- END Slider missions ------------------>
-    <!-- ------------------------------------------------------>
 
 
-
+    
+    <!-- ------------------------------------------------------>
+    <!-- ----------------- InfoButtons ------------------------>
+    <!-- ------------------------------------------------------>
+    <div class="container">
+        <div class="topText">
+            <h1>Une envie de shopping<br><span class="particuliere">particulière ?</span></h1>
+        </div>
+        
+        <div class="infoButtons">
+            <div class="imageInfoContainer">
+                <img src="./assets/img/home.svg" alt="Maison">
+                <p class="textInfoContainer">Maison</p>
+            </div>
+            <div class="imageInfoContainer">
+                <img src="./assets/img/resto.svg" alt="Restauration">
+                <p class="textInfoContainer">Restauration</p>
+            </div>
+            <div class="imageInfoContainer">
+                <img src="./assets/img/mode.svg" alt="Mode & Bijoux">
+                <p class="textInfoContainer">Mode & Bijoux</p>
+            </div>
+            <div class="imageInfoContainer">
+                <img src="./assets/img/beauty.svg" alt="Beauté & Santé">
+                <p class="textInfoContainer">Beauté & Santé</p>
+            </div>
+            <div class="imageInfoContainer">
+                <img src="./assets/img/culture.svg" alt="Culture & Loisirs">
+                <p class="textInfoContainer">Culture & Loisirs</p>
+            </div>
+        </div>
+        
+        <div class="bottomText">
+            <p><B>Plus de 40 boutiques</B> de mode, beauté et déco pour dénicher les dernières tendances<br>et se faire plaisir ensemble.</p>
+        </div>
+    
+        <div class="buttonContainer">
+          <button class="boutiqueButton">Toutes les boutiques</button>
+        </div>
+    </div>
+    
+    
+    <!-- ------------------------------------------------------>
+    <!-- --------------- END InfoButtons ---------------------->
+    <!-- ------------------------------------------------------>
 
     <!-- ------------------------------------------------------>
     <!-- ---------------- Slider Boutiques -------------------->
@@ -255,8 +335,7 @@
         <div class="slider" style="
             --width: 140px;
             --height: 140px;
-            --quantity: 9;
-        ">
+            --quantity: 9;">
             <button class="prev-button"></button>
             <div class="list">
                 <div class="item" style="--position: 1"><img src="./assets/img/mcdo.png" alt=""></div>
@@ -270,42 +349,78 @@
                 <div class="item" style="--position: 9"><img src="./assets/img/sephora.png" alt=""></div>
             </div>
             <button class="next-button"></button>
-        </div>
+          </div>
     </div>
     <!-- ------------------------------------------------------>
     <!-- -------------- END Slider Boutiques ------------------>
     <!-- ------------------------------------------------------>
-
-
-
-    <!-- ---------------------------------------------------------->
-    <!---- Encart "mission à nous confier" et Nos publications ---->
-    <!-- ---------------------------------------------------------->
-    <div></div>
-    <!-- ---------------------------------------------------------->
-    <!-- END Encart "mission à nous confier" et Nos publications -->
-    <!-- ---------------------------------------------------------->
-
-
-
-
-    <!-- ---------------------------------------------------------->
-    <!------------------------ Actualités ------------------------->
-    <!-- ---------------------------------------------------------->
-
-    <!-- ---------------------------------------------------------->
-    <!---------------------- END Actualités ----------------------->
-    <!-- ---------------------------------------------------------->
-
-
 
 <!-- ---------------------------------------------------------->
 <!------------------------ FOOTER ------------------------->
 <!-- ---------------------------------------------------------->
 
 </div> <!-- fermeture de la div id="home" -->
+
+
 <footer>
-    <div class="container">
+    <div class="footer_container">
+        <div class="colonne1">
+            <div class="logo-container">
+                <img class="header_img" src="./assets/img/logo1rb.png" alt="Logo">
+            </div>
+            <h3>Shopify</h3>
+            <p>Toute l'adresse est là <br> ou pas...</p>
+            <div class="BorderTel">
+                <div class="infoTel">
+                    <img class="icon_tel" src="./assets/img/Icon feather-smartphone.svg" alt="Icon2Telephone">
+                    <p class="footerInfo">01 02 03 04 05</p>
+                </div>
+            </div>
+            <div class="BorderMail">
+                <div class="infoMail">
+                    <img class="icon_mail" src="./assets/img/Icon feather-mail.svg" alt="Icon2Mail">
+                    <a href="mailto:" class="footerInfo" id="footerMailLink">Par mail</a>
+                </div>
+            </div>
+        </div>
+        <div class="colonne2">
+            <div class="Logo&Vous">
+                <h3>Shopify et vous</h3>
+                <a href="" class="footerLink">Notre histoire</a><br>
+                <a href="" class="footerLink">Accès / Horaires</a><br>
+                <a href="" class="footerLink">Boutiques & Restaurants</a><br>
+                <a href="" class="footerLink">Actus & Bons Plans</a><br>
+                <a href="" class="footerLink">Infos pratiques</a><br>
+                <a href="" class="footerLink">Plans des centres</a><br>
+                <a href="" class="footerLink">Emploi</a>
+            </div>
+            <div class="louer">
+                <h3>Louer</h3>
+                <a href="" class="footerLink">Un emplacement temporaire</a><br>
+                <a href="" class="footerLink">Un local</a>
+            </div>
+        </div>
+        <div class="colonne3">
+            <div class="Partager">
+                <a href="https://www.facebook.com/" class="footerReseau"><img src="./assets/img/Composant 25 – 1.svg" alt="Logo Facebook"></a>  
+                <a href="https://www.x.com/" class="footerReseau"><img src="./assets/img/Composant 26 – 1.svg" alt="Logo Twitter"></a>
+                <p class="PartageTag">  #enmode<span class="partageROUGE">partage</span></p>
+            </div>
+            <div class="newsletter">
+                <h3>Infos & Bons plans</h3>
+                <div class="newsletterForm">
+                    <form action="">
+                        <input type="text" id="MailForm" name="email" placeholder="Votre email">
+        
+  		                <input type="submit" class="fleche" name="rechercher" id="rechercher" value="➔">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p class="LogoRight">2025 Logo. Tous droits réservés.</p>
+        <p class="Mentions"><a href="" class="footerLink">Mentions légales</a> - <a href="" class="footerLink">Politique de confidentialité</a></p>
     </div>
 </footer>
 <!-- ---------------------------------------------------------->
