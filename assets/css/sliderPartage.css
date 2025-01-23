@@ -5,7 +5,7 @@
     padding-top: 45px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+   
     justify-content: center;
     height: 100vh;
     overflow: hidden;
@@ -14,7 +14,7 @@
 
 .slider-container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1885px;
     overflow: hidden;
     position: relative;
 }
@@ -29,8 +29,8 @@
 }
 /*choix des tailles et placement des images*/
 .slider img {
-    width: 1100px;
-    height: 500px; 
+    width: 1250px;
+    height: 800px; 
     object-fit: fill;
     margin: 0 15px;
     border-radius: 15px; /* Arrondir les bordures */
@@ -47,7 +47,7 @@
     /*aligne le bloc texte en bas a gauche*/
     justify-content: flex-end; 
     align-items: flex-start; 
-    color: white;
+    color: orange;
     font-family: 'Arial', sans-serif;
     pointer-events: none;
 }
@@ -57,16 +57,18 @@
     margin-bottom: 10px; 
 }
 
-.text-content h1 {
-    font-size: 18px;
+.text-content h1,
+.text-content h2 {
+    font-size: 27px;
     margin: 0;
     font-weight: bold;
 }
 
-.text-content h2,
+
 .text-content p {
-    font-size: 14px;
+    font-size: 23px;
     margin: 0;
+    color: white;
 }
 
 /*apparence bouton "en savoir plus"*/
@@ -77,7 +79,7 @@
     padding: 6px 15px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 11px;
+    font-size: 20px;
     pointer-events: auto; 
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
