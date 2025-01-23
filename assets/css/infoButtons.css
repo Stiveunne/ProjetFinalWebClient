@@ -22,7 +22,7 @@
     font-weight: 800; /*Elargir la police de base*/
 }
 
-/*Effet de transparence sur "particuliere ?*/
+/*Effet de transparence sur "particuliere" ?*/
 .particuliere {
     color: transparent; 
     -webkit-text-stroke: 1px white; /*Ajouter un contour blanc pour que le texte soit visible*/
