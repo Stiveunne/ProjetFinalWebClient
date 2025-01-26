@@ -1,9 +1,11 @@
+
+/*css du bloc slider1*/
 #sliderPartage {
     margin: 0;
-    padding: 0;
+    padding-top: 45px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+   
     justify-content: center;
     height: 100vh;
     overflow: hidden;
@@ -12,36 +14,94 @@
 
 .slider-container {
     width: 100%;
-    max-width: 1400px; 
+    max-width: 1885px;
     overflow: hidden;
     position: relative;
 }
 
-/*transition*/
 .slider {
     display: flex;
-    transition: transform 0.6s ease-in-out; 
+    transition: transform 0.6s ease-in-out;
 }
 
+.slide {
+    position: relative;
+}
+/*choix des tailles et placement des images*/
 .slider img {
-    width: 1100px; 
-    height: 400px; 
-    object-fit: cover;
-    margin: 0 15px; 
-    border-radius: 15px; /*image arrondie*/
+    width: 1250px;
+    height: 750px; 
+    object-fit: fill;
+    margin: 0 15px;
+    border-radius: 15px; /* Arrondir les bordures */
 }
 
+/*placement du texte*/
+.text-overlay {
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    width: calc(100% - 40px); 
+    display: flex;
+    flex-direction: column;
+    /*aligne le bloc texte en bas a gauche*/
+    justify-content: flex-end; 
+    align-items: flex-start; 
+    color: orange;
+    font-family: 'Arial', sans-serif;
+    pointer-events: none;
+}
+
+.text-content {
+    text-align: left;
+    margin-bottom: 10px; 
+}
+
+.text-content h1,
+.text-content h2 {
+    font-size: 27px;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.text-content p {
+    font-size: 23px;
+    margin: 0;
+    color: white;
+}
+
+/*apparence bouton "en savoir plus"*/
+.text-overlay button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    pointer-events: auto; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.text-overlay button:hover {
+    background-color: #cc0000;
+    transform: scale(1.1);
+}
+
+/*boutons liés au js pour le défilement*/
 .buttons {
-    position: absolute; 
-    bottom: 120px; 
+    position: absolute;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
 }
 
+/*apparence des boutons*/
 .buttons button {
-    background-color: white; 
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 50%;
     width: 15px;
@@ -50,7 +110,11 @@
     transition: background-color 0.3s;
 }
 
-/*changer l'aperçue au survol*/
+/*effet sur les boutons*/
 .buttons button:hover {
-    background-color: rgb(182, 39, 39) ; 
+    background-color: rgb(182, 39, 39);
+}
+
+.buttons button.active {
+    background-color: rgb(182, 39, 39);
 }
