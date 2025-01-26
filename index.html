@@ -202,27 +202,38 @@
     <!-- ----------------- Slider Actus ----------------------->
     <!-- ------------------------------------------------------>
     <div id="actus-slider">
-            <div id="actus">
+        <div id="actus">
             <div id="actus_interactible">
-                <p id="actus_index"><span>1/</span>10</p>
-                <div id="actus_interactible_arrows">
-                    <button index-change="-1">←</button>
-                    <button index-change="1">→</button>
+                <div id="actus_interactible_box">
+                    <p id="actus_index"><span>1/</span>10</p>
                 </div>
             </div>
             <div id="actus_title">
-                <h3>Actus & bons plans</h3>
-                <img src="./assets/img/Icon feather-arrow-right.svg">
-                <button>Toutes les actus & bons plans</button>
+                <h3>Actus &<br> 
+                    <span>bons plans</span>
+                </h3>
+                
+                <div id="actus_interactible_arrows">
+                    <button index-change="-1">
+                        <img src="./assets/img/Icon awesome-arrow-left.svg" alt="fleche gauche">
+                    </button>
+                    <div id="slider-progress-bar">
+                        <div class="progress-indicator"></div>
+                    </div>
+                    <button index-change="1">
+                        <img src="./assets/img/Icon awesome-arrow-left-1.svg" alt="fleche droite">
+                    </button>
+                </div>
             </div>
+            
             <div id="actus_slider">
                 <div id="actus_slides">
                     <div>
                         <div class="actus_image" img-url="./assets/img/pub1.jpg">
                             <div class="text-overlay">
-                                <p class="date">15/02/2023</p>
-                                <p class="main-text">Préparez votre visite</p>
-                                <p class="hashtag">#enmodedécouverte</p>
+                                <p class="date">15/08/2023</p>
+                                <p class="main-text">OASIS, nouvelle <br>saveur !</p>
+                                <p class="hashtag">#enmodefraîcheur</p>
                             </div>
                         </div>
                         
@@ -231,8 +242,8 @@
                         <div class="actus_image" img-url="./assets/img/pub2.jpg">
                             <div class="text-overlay">
                                 <p class="date">11/02/2023</p>
-                                <p class="main-text">PRIMARK ouvre à nom du Logo</p>
-                                <p class="hashtag">#ouverture  #information</p>
+                                <p class="main-text">COCA COLA vous propose un nouvel emballage</p>
+                                <p class="hashtag">#recyclage  #information</p>
                             </div>
                         </div>
                         
@@ -241,7 +252,7 @@
                         <div class="actus_image" img-url="./assets/img/pub3.png">
                             <div class="text-overlay">
                                 <p class="date">09/01/2023</p>
-                                <p class="main-text">Une heure de parking offerte</p>
+                                <p class="main-text">Un menu acheté, un burger offert !</p>
                                 <p class="hashtag">#enmodesoldes  #bonplans</p>
                             </div>
                         </div>
@@ -260,9 +271,9 @@
                     <div>
                         <div class="actus_image" img-url="./assets/img/pub5.jpg">
                             <div class="text-overlay">
-                                <p class="date">10/11/2023</p>
-                                <p class="main-text">Protégeons notre planète</p>
-                                <p class="hashtag">#enmodeprévention</p>
+                                <p class="date">25/04/2023</p>
+                                <p class="main-text">Promotion sur le menu classique !</p>
+                                <p class="hashtag">#enmodeéconomie</p>
                             </div>
                         </div>
                        
@@ -270,9 +281,9 @@
                     <div>
                         <div class="actus_image" img-url="./assets/img/pub1.jpg">
                             <div class="text-overlay">
-                                <p class="date">15/02/2023</p>
-                                <p class="main-text">Préparez votre visite</p>
-                                <p class="hashtag">#enmodedécouverte</p>
+                                <p class="date">15/08/2023</p>
+                                <p class="main-text">OASIS, nouvelle <br>saveur !</p>
+                                <p class="hashtag">#enmodefraîcheur</p>
                             </div>
                         </div>
                         
@@ -281,8 +292,8 @@
                         <div class="actus_image" img-url="./assets/img/pub2.jpg">
                             <div class="text-overlay">
                                 <p class="date">11/02/2023</p>
-                                <p class="main-text">PRIMARK ouvre à nom du Logo</p>
-                                <p class="hashtag">#ouverture  #information</p>
+                                <p class="main-text">COCA COLA vous propose un nouvel emballage</p>
+                                <p class="hashtag">#recyclage  #information</p>
                             </div>
                         </div>
                         
@@ -291,7 +302,7 @@
                         <div class="actus_image" img-url="./assets/img/pub3.png">
                             <div class="text-overlay">
                                 <p class="date">09/01/2023</p>
-                                <p class="main-text">Une heure de parking offerte</p>
+                                <p class="main-text">Un menu acheté, un burger offert !</p>
                                 <p class="hashtag">#enmodesoldes  #bonplans</p>
                             </div>
                         </div>
@@ -310,16 +321,21 @@
                     <div>
                         <div class="actus_image" img-url="./assets/img/pub5.jpg">
                             <div class="text-overlay">
-                                <p class="date">10/11/2023</p>
-                                <p class="main-text">Protégeons notre planète</p>
-                                <p class="hashtag">#enmodeprévention</p>
+                                <p class="date">25/04/2023</p>
+                                <p class="main-text">Promotion sur le menu classique !</p>
+                                <p class="hashtag">#enmodeéconomie</p>
                             </div>
                         </div>
                        
                     </div>
                 </div>
             </div>
+            
         </div>
+        <div id="bouton-actu-container">
+            <button>Toutes les actus & bons plans</button>
+        </div>
+        
 
     </div>
     <!-- ------------------------------------------------------>

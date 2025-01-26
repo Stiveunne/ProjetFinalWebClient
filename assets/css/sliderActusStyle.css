@@ -1,3 +1,4 @@
+/*Placer le container*/
 #actus {
     width: 100%;
     display: grid;
@@ -7,7 +8,9 @@
     background-color: rgb(182, 39, 39);
 }
 
+/*Placer un autre container dans le premier*/
 #actus_title {
+    position: relative;
     margin: 4rem 0 1rem 1rem;
     font-size: 2em;
     grid-area: title;
@@ -15,51 +18,70 @@
     color: white;
     display: flex;
     cursor: pointer;
+    justify-content: space-between;
+    align-items: center; 
 }
 
-#actus_title img {
-    width: 0.5em;
-    height: 0.5em;
-    position: relative;
-    top: 4rem;
-    left: 3rem;
-    transition: left 0.5s;
+/*Placer le container du bouton*/
+#bouton-actu-container {
+    text-align: center; 
+    background-color: rgb(182, 39, 39);
+    padding-bottom: 40px;
+
 }
 
-#actus_title:hover img {
-    left : 1rem;
-    transition: left 0.5s;
+/* Propriétés du bouton */
+#bouton-actu-container button {
+    font-size: 1.2rem;
+    background-color: white;
+    color: rgb(182, 39, 39);
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.5rem;
+    border: 2px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block; 
+    text-align: center;
 }
 
-#actus_interactible {
-    grid-area: buttons;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    margin: 1rem 0 auto 3rem;
+/*Animation au survol du bouton*/
+#bouton-actu-container button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
 }
 
-#actus_interactible_arrows {
-    background-color: black;
-    padding: 0.7rem 0.5rem;
-    width: min-content;
-    height: min-content;
-    display: flex;
-    z-index: 1;
-    position: relative;
-    top: 1rem;
-    left: 1rem;
-}
-
-#actus button {
-    border: none;
-    background-color: transparent;
+/*Propriétés du titre*/
+#actus_title h3 {
+    font-size: 3.5rem; 
+    line-height: 2.5rem; 
+    font-family: 'FrontageCondensedOutline';
     color: white;
-    margin: auto 0.3rem;
-    padding: 0;
-    font-size: 0.7em;
+    margin: 0;
+    display: inline-block; 
 }
 
+/* Propriétés "bons plans"*/
+#actus_title h3 span {
+    display: block; 
+    text-indent: 1rem; 
+    font-size: 3.5rem; 
+    color: transparent; 
+    -webkit-text-stroke: 2px white; 
+    margin-top: 0.5rem; 
+}
+
+/* Positionnement des flèches et de la barre*/
+#actus_interactible {
+    margin-top: 0.5rem; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 1rem; 
+    position: relative; 
+}
+
+/*Placement slider*/
 #actus_slider {
     position: relative;
     grid-area: slider;
@@ -69,9 +91,10 @@
     font-family: Arial;
     color: white;
     width: 100%;
-    height: 480px;
+    height: 370px;
 }
 
+/*Placement des slides*/
 #actus_slides {
     display: flex;
     flex-flow: row nowrap;
@@ -89,6 +112,7 @@
     background-position: center;
 }
 
+/*Propriétés des images*/
 .actus_image {
     display: flex;
     width: 14rem;
@@ -97,11 +121,12 @@
     padding: 1.5rem;
     background-color: transparent;
     background-blend-mode: overlay;
-    transition: background-color 0.5s;
     background-position: center;
     background-size: cover;
+    transition: transform 0.3s ease;
 }
 
+/*Propriétés du texte image*/
 .actus_image p {
     margin-top: auto;
     margin-bottom: 0;
@@ -112,44 +137,17 @@
     font-family: "Gill Sans", sans-serif;
 }
 
-#actus_index {
-    color: white;
-    font-family: 'Segoe UI Light';
-}
-
-#actus_index span {
-    font-size: 1.5em;
-}
-
+/*Animation au survol des images*/
 .actus_image:hover {
-    background-color: rgb(196, 88, 88);
-    transition: background-color 0.5s;
+    transform: scale(1.05); 
 }
 
+/*Animation texte au survol des images*/
 .actus_image:hover p {
     margin-bottom: 1rem;
 }
 
-.actus_image p:after {
-    display: inline-block;
-    position: relative;
-    top: 2rem;
-    left: -1rem;
-    width: 1em;
-    height: 1em;
-    content:"";
-    background: url("../img/Icon feather-arrow-right-white.svg") 0 0 no-repeat;
-    color: white;
-    opacity: 0;
-    transition: all 0.5s;
-}
-
-.actus_image:hover p:after {
-    opacity: 1;
-    left: 0.5rem;
-    transition: all 0.5s;
-}
-
+/*Placement des bloc texte sur les images*/
 .text-overlay {
     width: 14rem;
     height: 16rem;
@@ -161,12 +159,79 @@
     font-family: "Gill Sans", sans-serif;
 }
 
+/*Propriétés des blocs texte sur les images*/
 .text-overlay p {
     margin-top: auto;
     margin-bottom: 0;
     transition: margin-bottom 0.5s;
     color: black;
-    font-size: 1em;
+    font-size: 1.2em;
     height: min-content;
     font-family: "Gill Sans", sans-serif;
+    /*Ombre pour mieux voir le texte sur les images*/
+    text-shadow: 
+        0px 0px 2px rgba(255, 255, 255, 0.8), 
+        0px 0px 4px rgba(255, 255, 255, 0.6); 
+}
+
+/*Placement container fleches et barres*/
+#actus_interactible {
+    grid-area: buttons;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding-left: 3rem;
+}
+/*Placement fleches et barres*/
+#actus_interactible_arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 65px;
+    gap: 1rem;
+    margin-top: 2rem; 
+}
+
+/*Indicateur de déplacement sur la barre*/
+#slider-progress-bar {
+    width: 500px;  
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+/*Indicateur de déplacement sur la barre*/
+.progress-indicator {
+    position: absolute;  
+    height: 100%;
+    width: 20%; 
+    background-color: white;
+    border-radius: 6px;
+    transition: left 0.5s;  
+    left: 0%; 
+}
+
+/*Propriétés fleches*/
+#actus_interactible_arrows button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/*Propriétés des img fleches*/
+#actus_interactible_arrows img {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: brightness(0) invert(1); 
+}
+
+/*cacher le compteur de slide*/
+#actus_interactible{
+    visibility: hidden;
 }
