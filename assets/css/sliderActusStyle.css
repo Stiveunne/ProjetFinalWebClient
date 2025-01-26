@@ -148,7 +148,7 @@
 }
 
 /*Placement des bloc texte sur les images*/
-.text-overlay {
+.text-overlay2 {
     width: 14rem;
     height: 16rem;
     border-radius: 0.5rem;
@@ -160,7 +160,7 @@
 }
 
 /*Propriétés des blocs texte sur les images*/
-.text-overlay p {
+.text-overlay2 p {
     margin-top: auto;
     margin-bottom: 0;
     transition: margin-bottom 0.5s;
